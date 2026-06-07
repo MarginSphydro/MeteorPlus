@@ -177,6 +177,19 @@ public class MeteorPlusAddon extends MeteorAddon {
 		//modules.add(new KillAuraPlus());
 		modules.add(new ElytraFlyPlus());
 		modules.add(new VelocityPlus());
+		modules.add(new SelfWeb());
+		modules.add(new AutoSakura());
+		modules.add(new AutoQueue());
+		modules.add(new BedrockEdgePhaseL());
+		modules.add(new BedrockEdgePhaseLegacy());
+		modules.add(new BedrockEdgePhaseRewritten());
+		modules.add(new InvCrash());
+		modules.add(new PlayerNotifier());
+		modules.add(new AntiSpam());
+		modules.add(new AutoEz());
+		modules.add(new InfiniteDeathRespawn());
+		modules.add(new GodHoleESP());
+
 		if (!MixinPlugin.isMeteorRejects) {
 			modules.add(new NoJumpDelay());
 		}

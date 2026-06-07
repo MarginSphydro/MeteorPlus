@@ -3,10 +3,14 @@ package nekiplay.meteorplus;
 import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.commands.Commands;
+import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.modules.misc.BetterChat;
 import nekiplay.MixinPlugin;
 import nekiplay.main.items.ModItems;
 import nekiplay.meteorplus.features.commands.*;
+import nekiplay.meteorplus.features.hud.InfiniteDeathRespawnHUD;
+import nekiplay.meteorplus.features.hud.NearbyPlayersHUD;
+import nekiplay.meteorplus.features.hud.PacketStatsHUD;
 import nekiplay.meteorplus.features.modules.combat.*;
 import nekiplay.meteorplus.features.modules.combat.velocity.VelocityPlus;
 import nekiplay.meteorplus.features.modules.integrations.WhereIsIt;
@@ -211,7 +215,9 @@ public class MeteorPlusAddon extends MeteorAddon {
 		//region Hud
 		LOG.info(METEOR_LOGPREFIX + " Initializing hud...");
 
-
+		Hud.get().register(NearbyPlayersHUD.INFO);
+		Hud.get().register(InfiniteDeathRespawnHUD.INFO);
+		Hud.get().register(PacketStatsHUD.INFO);
 
 		LOG.info(METEOR_LOGPREFIX + " Loaded hud");
 		//endregion
